@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <%= task.description %>
+  </td>
+  <td>
+    <% if task.completed? %>
+      Yes
+    <% else %>
+      No
+    <% end %>
+  </td>
+</tr>
