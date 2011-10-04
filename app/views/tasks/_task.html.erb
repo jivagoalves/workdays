@@ -1,0 +1,15 @@
+<tr>
+  <td>
+    <%= task.description %>
+  </td>
+  <td>
+    <% if task.completed? %>
+      Yes
+    <% else %>
+      No
+    <% end %>
+  </td>
+  <td>
+    <%= button_to "delete", task, :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>
