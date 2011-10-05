@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_filter :authenticate
 
   def index
     @tasks = Task.all

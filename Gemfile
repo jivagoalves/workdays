@@ -36,3 +36,5 @@ group :test do
   gem 'rspec-rails', '2.6.1'
 end
 
+gem 'authlogic', '3.0.3'
+

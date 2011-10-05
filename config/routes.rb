@@ -1,7 +1,17 @@
 Workdays::Application.routes.draw do
-  resources "tasks"
+  # Tasks
+  resources 'tasks'
   
-  root :to => "tasks#index"
+  # User Sessions
+  resources :user_sessions, :only => [:new, :create, :destroy]
+  match '/signin',  :to => 'user_sessions#new'
+  match '/signout', :to => 'user_sessions#destroy'
+
+  # Users
+  resources 'users'
+  match '/signup',  :to => 'users#new'
+  
+  root :to => 'tasks#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
