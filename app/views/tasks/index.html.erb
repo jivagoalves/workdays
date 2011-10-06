@@ -3,23 +3,7 @@
 <% if @tasks.empty? %>
   <p>No tasks found.</p>
 <% else %>
-  <table>
-    <thead>
-      <tr>
-        <th>
-          Description
-        </th>
-        <th>
-          Completed
-        </th>
-        <th>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= render @tasks %>
-    </tbody>
-  </table>
+  <%= render :partial => 'shared/tasks', :collecion => @tasks %>
 <% end %>
 
 <p>

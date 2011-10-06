@@ -1,0 +1,15 @@
+<h1>Home</h1>
+
+<div id="main">
+  <h2>My tasks</h2>
+  
+  <% if @tasks.empty? %>
+    <p>You have no tasks!</p>
+  <% else %>
+    <%= render 'shared/tasks', :collection => @tasks %>
+  <% end %>
+</div>
+
+<p>
+  <%= link_to "New task", new_task_path %>
+</p>

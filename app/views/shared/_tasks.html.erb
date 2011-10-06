@@ -1,0 +1,21 @@
+<% unless @tasks.empty? %>
+  <div id="tasks">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Description
+          </th>
+          <th>
+            Completed
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render :partial => 'shared/task', :collection => @tasks %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

@@ -1,6 +1,6 @@
 Workdays::Application.routes.draw do
   # Tasks
-  resources 'tasks'
+  resources :tasks
   
   # User Sessions
   resources :user_sessions, :only => [:new, :create, :destroy]
@@ -8,10 +8,10 @@ Workdays::Application.routes.draw do
   match '/signout', :to => 'user_sessions#destroy'
 
   # Users
-  resources 'users'
+  resources :users
   match '/signup',  :to => 'users#new'
   
-  root :to => 'tasks#index'
+  root :to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
