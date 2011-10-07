@@ -1,0 +1,14 @@
+<% unless @tasks.empty? %>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render :partial => 'shared/task_list_item', :collection => @tasks, :as => :task %>
+    </tbody>
+  </table>
+<% end %>
