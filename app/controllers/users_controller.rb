@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:success] = "Welcome to WorkDays!"
-      redirect_to tasks_path
+      redirect_to root_path
     else
       render "new"
     end
