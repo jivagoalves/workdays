@@ -15,15 +15,18 @@
     </div>
   <% end %>
   
-  <div class="field">
-    <%= f.label :username %>
+  <p class="field">
+    <%= f.label :username, 'User name' %>
     <%= f.text_field :username %>
-  </div>
-  <div class="field">
+  </p>
+  <p class="field">
     <%= f.label :password %>
     <%= f.password_field :password %>
-  </div>
-  <div class="actions">
+  </p>
+  <p class="actions">
     <%= f.submit "Submit" %>
-  </div>
-<% end%>
+  </p>
+  <p>
+    <%= link_to 'Sign up!', signup_path %>
+  </p>
+<% end %>
