@@ -2,7 +2,7 @@
 
 <%= form_for @task do |f| %>
   <p class="field">
-    <%= f.text_field :description, :size => 50 %>
+    <%= f.text_field :description, :size => @task.description.size %>
   </p>
   <p class="actions">
     <%= f.submit 'Save' %>
