@@ -21,6 +21,10 @@ class TasksController < ApplicationController
     # TODO: show a task
   end
   
+  def edit
+    @task = Task.find_by_id(params[:id])
+  end
+  
   def update
     @task = Task.find_by_id(params[:id])
     if @task.update_attributes(params[:task])

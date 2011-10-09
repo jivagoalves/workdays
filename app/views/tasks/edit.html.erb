@@ -1,0 +1,10 @@
+<h1>Edit task</h1>
+
+<%= form_for @task do |f| %>
+  <p class="field">
+    <%= f.text_field :description, :size => 50 %>
+  </p>
+  <p class="actions">
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

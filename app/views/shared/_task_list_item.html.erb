@@ -1,6 +1,6 @@
 <tr id="task_list_item_<%= task.id %>">
   <td>
-    <%= task.description %>
+    <%= link_to task.description, edit_task_path(task) %>
   </td>
   <td id="completed_field_form_<%= task.id %>">
     <%= render :partial => 'shared/completed_field_form', :locals => { :task => task } %>
