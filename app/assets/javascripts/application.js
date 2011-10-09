@@ -21,6 +21,5 @@ jQuery.fn.submitWithAjax = function() {
 };
 
 $(document).ready(function() {
-  $("#new_task").submitWithAjax();
-  $("form.delete_task").submitWithAjax();
+  $("form.submit_with_ajax").submitWithAjax();
 })

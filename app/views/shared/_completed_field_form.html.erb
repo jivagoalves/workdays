@@ -1,4 +1,4 @@
-<%= form_for task do |f| %>
+<%= form_for task, :remote => true, :html => { :class => 'edit_task submit_with_ajax' } do |f| %>
   <%= f.hidden_field :completed, :value => !task.completed %>
   <% if task.completed? %>
     <%= f.submit "Not okay!" %>

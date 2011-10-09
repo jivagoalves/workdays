@@ -1,0 +1,3 @@
+$("#completed_field_form_<%= @task.id %>").html("<%= escape_javascript(render :partial => 'shared/completed_field_form',
+                                                                              :locals => { :task => @task }) %>");
+

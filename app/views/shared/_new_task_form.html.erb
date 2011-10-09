@@ -1,5 +1,5 @@
 <div id="new_task_form">
-  <%= form_for task do | f | %>
+  <%= form_for task, :remote => true, :html => { :class => 'new_task submit_with_ajax' } do | f | %>
     <%= f.text_field :description %>
     <%= f.submit "Add" %>
   <% end%>

@@ -31,9 +31,15 @@ class TasksController < ApplicationController
   def update
     @task = Task.find_by_id(params[:id])
     if @task.update_attributes(params[:task])
-      flash[:success] = "Task updated successfully!"
+      flash[:success] = "Task updated successfully!" unless request.xhr?
     end
-    redirect_to root_path
+    
+    respond_to do |format|
+      format.html do
+        redirect_to root_path
+      end
+      format.js
+    end
   end
   
   def destroy

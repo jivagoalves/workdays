@@ -2,10 +2,10 @@
   <td>
     <%= task.description %>
   </td>
-  <td>
+  <td id="completed_field_form_<%= task.id %>">
     <%= render :partial => 'shared/completed_field_form', :locals => { :task => task } %>
   </td>
   <td>
-    <%= button_to "Delete", task, :method => :delete, :form_class => "delete_task", :remote => true %>
+    <%= button_to "Delete", task, :method => :delete, :form_class => "delete_task submit_with_ajax", :remote => true %>
   </td>
 </tr>
