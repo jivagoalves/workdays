@@ -1,0 +1,6 @@
+$("#task_list_item_<%= @task.id %>").fadeOut(200, function(){
+  $(this).remove();
+  <% if Task.find_all_by_user_id(current_user).empty? %>
+    $("#task_list tbody").append("<%= escape_javascript(render 'shared/no_task_list_item') %>").fadeIn(200);
+  <% end %>
+});

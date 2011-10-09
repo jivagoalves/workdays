@@ -1,4 +1,5 @@
 $("#no_task_item").remove();
-$("#task_list").prepend("<%= escape_javascript(render(:partial => "shared/task_list_item", :locals => { :task => @task })) %>");
-$("#task_list tbody tr:first").hide().fadeIn(1000);
+$("#task_list").prepend("<%= escape_javascript(render :partial => "shared/task_list_item",
+                                                      :locals => { :task => @task }) %>");
+$("#task_list_item_<%= @task.id %>").hide().fadeIn(1000);
 $("#task_description").val("");

@@ -8,9 +8,7 @@
   </thead>
   <tbody>
     <% if @tasks.empty? %>
-      <tr id="no_task_item">
-        <td colspan="3">You have no tasks!</td>
-      </tr>
+      <%= render 'shared/no_task_list_item' %>
     <% else %>
       <%= render :partial => 'shared/task_list_item', :collection => @tasks, :as => :task %>
     <% end %>

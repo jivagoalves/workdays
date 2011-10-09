@@ -6,6 +6,6 @@
     <%= render :partial => 'shared/completed_field_form', :locals => { :task => task } %>
   </td>
   <td>
-    <%= button_to "Delete", task, :method => :delete, :confirm => "Are you sure?" %>
+    <%= button_to "Delete", task, :method => :delete, :form_class => "delete_task", :remote => true %>
   </td>
 </tr>
