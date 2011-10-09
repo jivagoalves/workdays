@@ -21,10 +21,6 @@
     
     <%= render :partial => 'shared/new_task_form', :locals => { :task => @task } %>
     
-    <% if @tasks.empty? %>
-      <p>You have no tasks!</p>
-    <% else %>
-      <%= render 'shared/task_list', :collection => @tasks %>
-    <% end %>
+    <%= render 'shared/task_list', :collection => @tasks %>
   </div>
 </div>

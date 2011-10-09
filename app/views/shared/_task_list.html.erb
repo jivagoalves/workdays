@@ -1,14 +1,18 @@
-<% unless @tasks.empty? %>
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
+<table id="task_list">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @tasks.empty? %>
+      <tr id="no_task_item">
+        <td colspan="3">You have no tasks!</td>
       </tr>
-    </thead>
-    <tbody>
+    <% else %>
       <%= render :partial => 'shared/task_list_item', :collection => @tasks, :as => :task %>
-    </tbody>
-  </table>
-<% end %>
+    <% end %>
+  </tbody>
+</table>

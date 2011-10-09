@@ -12,8 +12,13 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.build(params[:task])
     if @task.save
-      flash[:success] = "Task added successfully!"
-      redirect_to root_path
+      respond_to do |format|
+        format.html do
+          flash[:success] = "Task added successfully!"
+          redirect_to root_path
+        end
+        format.js
+      end
     else
       render "new"
     end
