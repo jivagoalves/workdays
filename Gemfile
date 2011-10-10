@@ -38,3 +38,8 @@ end
 
 gem 'authlogic', '3.0.3'
 
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
+
