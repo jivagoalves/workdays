@@ -23,6 +23,7 @@ class TasksController < ApplicationController
   
   def edit
     @task = Task.find_by_id(params[:id])
+    @spent_time = SpentTime.new
     
     respond_to do |format|
       format.html
@@ -38,7 +39,12 @@ class TasksController < ApplicationController
     
     respond_to do |format|
       format.html do
-        redirect_to root_path
+        if @task.errors.any?
+          @spent_time = SpentTime.new
+          render 'edit'
+        else
+          redirect_to edit_task_path(@task)
+        end
       end
       format.js
     end
@@ -58,11 +64,8 @@ class TasksController < ApplicationController
   private
   
   def correct_user
-    redirect_to root_path if current_user.tasks.find_by_id(params[:id]).nil?
-  end
-  
-  def redirect_to_root_path
-    redirect_to root_path
+    task = Task.find_by_id(params[:id])
+    redirect_to signout_path unless current_user.tasks.include?(task)
   end
 
 end

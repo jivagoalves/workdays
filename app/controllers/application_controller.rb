@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  helper_method :current_user, :signed_in?, :current_user?
+  helper_method :current_user, :signed_in?, :current_user?, :redirect_to_root_path
   
   private
 
@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
   
   def current_user?(user)
     user == current_user
+  end
+  
+  def redirect_to_root_path
+    redirect_to root_path
   end
   
 end

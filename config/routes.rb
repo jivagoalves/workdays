@@ -11,6 +11,9 @@ Workdays::Application.routes.draw do
   resources :users
   match '/signup',  :to => 'users#new'
   
+  # Spent Times
+  resources :spent_times
+  
   root :to => 'pages#home'
 
   # The priority is based upon order of creation:
