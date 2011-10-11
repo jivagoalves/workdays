@@ -1,0 +1,14 @@
+<%= form_for @spent_time do |f| %>
+  <%= f.hidden_field :task_id, :value => @task.id %>
+  <p class="field">
+    <%= f.label :spent_time, 'How many minutes?' %>
+    <%= f.text_field :spent_time, :size => 5 %>
+  </p>
+  <p class="field">
+    <%= f.label :day, 'When?' %>
+    <%= date_select :spent_time, :day %>
+  </p>
+  <p class="actions">
+    <%= f.submit 'Add' %>
+  </p>
+<% end %>

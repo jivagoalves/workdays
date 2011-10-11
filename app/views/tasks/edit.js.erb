@@ -1,1 +1,2 @@
 $("#task_list_item_description_<%= @task.id %>").html("<%= escape_javascript(render 'edit_task_form') %>");
+$("#task_list_item_<%= @task.id %>").after("<tr id='spent_time_for_list_item_<%= @task.id %>'><td colspan='3'><%= escape_javascript(render 'spent_times/spent_time_form') %><%= escape_javascript(link_to 'I\'m done!', root_path) %></td></tr>");

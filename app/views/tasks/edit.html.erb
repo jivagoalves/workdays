@@ -17,20 +17,7 @@
 
 <%= render :partial => 'shared/form_errors', :locals => { :errors => @spent_time.errors } %>
 
-<%= form_for @spent_time do |f| %>
-  <%= f.hidden_field :task_id, :value => @task.id %>
-  <p class="field">
-    <%= f.label :spent_time, 'How many minutes?' %>
-    <%= f.text_field :spent_time, :size => 5 %>
-  </p>
-  <p class="field">
-    <%= f.label :day, 'When?' %>
-    <%= date_select :spent_time, :day %>
-  </p>
-  <p class="actions">
-    <%= f.submit 'Add' %>
-  </p>
-<% end %>
+<%= render 'spent_times/spent_time_form' %>
 
 <% if @task.time_spent_with_me? %>
   <h3>See details below:</h3>
