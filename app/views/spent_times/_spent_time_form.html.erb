@@ -1,5 +1,4 @@
-<%= form_for @spent_time do |f| %>
-  <%= f.hidden_field :task_id, :value => @task.id %>
+<%= form_for [@task, @spent_time] do |f| %>
   <p class="field">
     <%= f.label :spent_time, 'How many minutes?' %>
     <%= f.text_field :spent_time, :size => 5 %>

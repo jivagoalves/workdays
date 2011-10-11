@@ -15,6 +15,10 @@
 
 <h2>Spent time on it</h2>
 
+<% unless @task.time_spent_with_me? %>
+  <p>There is no spent time yet. Do it!</p>
+<% end %>
+  
 <%= render :partial => 'shared/form_errors', :locals => { :errors => @spent_time.errors } %>
 
 <%= render 'spent_times/spent_time_form' %>

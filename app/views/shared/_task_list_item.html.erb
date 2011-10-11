@@ -2,6 +2,9 @@
   <td id="task_list_item_description_<%= task.id %>">
     <%= render :partial => 'shared/description_field_form', :locals => { :task => task } %>
   </td>
+  <td>
+    <%= link_to "#{task.time_spent_with_me} min", new_task_spent_time_path(task), :remote => false, :remote => true %>
+  </td>
   <td id="completed_field_form_<%= task.id %>">
     <%= render :partial => 'shared/completed_field_form', :locals => { :task => task } %>
   </td>

@@ -1,6 +1,8 @@
-<li>
-  <%= spent_time.spent_time %>
-  minutes spent on
-  <%= spent_time.formatted_day %>
-  <%= button_to "delete", spent_time, :method => :delete, :remote => true %>
-</li>
+<% unless spent_time.errors.any? %>
+  <li>
+    <%= spent_time.spent_time %>
+    minutes spent on
+    <%= spent_time.formatted_day %>
+    <%= button_to "delete", [@task,spent_time], :method => :delete %>
+  </li>
+<% end %>

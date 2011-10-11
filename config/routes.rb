@@ -1,6 +1,9 @@
 Workdays::Application.routes.draw do
   # Tasks
-  resources :tasks
+  resources :tasks do
+    # Spent Times
+    resources :spent_times
+  end
   
   # User Sessions
   resources :user_sessions, :only => [:new, :create, :destroy]
@@ -10,9 +13,6 @@ Workdays::Application.routes.draw do
   # Users
   resources :users
   match '/signup',  :to => 'users#new'
-  
-  # Spent Times
-  resources :spent_times
   
   root :to => 'pages#home'
 
