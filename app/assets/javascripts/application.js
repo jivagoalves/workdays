@@ -7,3 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+jQuery.fn.exists = function() {
+  return jQuery(this).length > 0;
+}

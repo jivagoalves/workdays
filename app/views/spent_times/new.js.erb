@@ -1,1 +1,16 @@
-$("#task_list_item_<%= @task.id %>").after("<tr id='spent_time_for_list_item_<%= @task.id %>'><td colspan='4'><%= escape_javascript(render 'spent_times/spent_time_form') %><%= escape_javascript(link_to 'I\'m done!', root_path) %></td></tr>");
+if (!$("#spent_time_for_list_item_<%= @task.id %>").exists()) {
+  $("#task_list_item_<%= @task.id %>").after(" \
+    <tr id='spent_time_for_list_item_<%= @task.id %>'> \
+      <td colspan='4'> \
+        <%= escape_javascript(render 'spent_times/spent_time_form') %> \
+        <%= escape_javascript(link_to 'I\'m done!', root_path, :remote => true, :id => 'close_spent_time_form_' + @task.id.to_s) %> \
+      </td> \
+    </tr> \
+  ");
+  $('#close_spent_time_form_<%= @task.id %>').bind('ajax:before', function() {
+    $(this).closest('tr').remove();
+  });
+}
+else {
+  $("#spent_time_for_list_item_<%= @task.id %>").remove();
+}
