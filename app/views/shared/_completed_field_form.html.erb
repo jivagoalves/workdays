@@ -1,8 +1,8 @@
 <%= form_for task, :remote => true do |f| %>
   <%= f.hidden_field :completed, :value => !task.completed %>
   <% if task.completed? %>
-    <%= f.submit "Not okay!", :class => 'submit' %>
+    <%= f.submit "Not okay!", :class => 'submit gray' %>
   <% else %>
-    <%= f.submit "Done!", :class => 'submit' %>
+    <%= f.submit "Done!", :class => 'submit green' %>
   <% end %>
 <% end %>

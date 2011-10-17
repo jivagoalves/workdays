@@ -138,3 +138,87 @@ form.formatted .field label {
   width: 150px;
 }
 
+input.submit {
+  background: #2daebf repeat-x;
+  display: inline-block;
+  padding: 5px 10px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  text-shadow: 0 -1px 1px #222;
+  border-bottom: 1px solid #222;
+  position: relative;
+  cursor: pointer;
+}
+
+input.submit:hover {
+  background-color: #007D9A;
+}
+
+input.submit.small {
+  font-size: 11px;
+}
+input.submit.medium {
+  font-size: 13px;
+}
+input.submit.large {
+  font-size: 14px;
+  padding: 8px 14px 9px;
+}
+
+
+input.submit.black {
+  background-color: #222;
+  color: #fff;
+}
+input.submit.black:hover {
+  background-color: #111;
+  color: white;
+}
+input.submit.green {
+  background-color: #749A02;
+}
+input.submit.green:hover {
+  background-color: #91BD09;
+}
+input.submit.gray {
+  background-color: #CCC;
+}
+input.submit.gray:hover {
+  background-color: #AAA;
+}
+input.submit.blue {
+  background-color: #2daebf;
+}
+input.submit.blue:hover {
+  background-color: #007D9A;
+}
+input.submit.red {
+  background-color: #e33100;
+}
+input.submit.red:hover {
+  background-color: #872300;
+}
+input.submit.magenta {
+  background-color: #a9014b;
+}
+input.submit.magenta:hover {
+  background-color: #630030;
+}
+input.submit.orange {
+  background-color: #ff5c00;
+}
+input.submit.orange:hover {
+  background-color: #D45500;
+}
+input.submit.yellow {
+  background-color: #ffb515;
+}
+input.submit.yellow:hover {
+  background-color: #FC9200;
+}
