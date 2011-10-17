@@ -1,6 +1,6 @@
 <div id="new_task_form">
   <%= form_for task, :remote => true do | f | %>
     <%= f.text_field :description %>
-    <%= f.submit "Add" %>
+    <%= f.submit "Add", :class => 'submit' %>
   <% end%>
 </div>

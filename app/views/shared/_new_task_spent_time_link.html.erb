@@ -1,1 +1,6 @@
-<%= link_to "#{task.time_spent_with_me} min", new_task_spent_time_path(task), :remote => false, :remote => true %>
+<% if task.time_spent_with_me? %>
+  <% link_name = "#{task.time_spent_with_me} min" %>
+<% else %>
+  <% link_name = "Add time" %>
+<% end %>
+<%= link_to link_name, new_task_spent_time_path(task), :remote => false, :remote => true %>

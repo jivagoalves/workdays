@@ -7,10 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="nav">
+<div id="nav" class="round">
   <% if signed_in? %>
-    <%= link_to "Home", root_path %>
-    <%= link_to "Settings", edit_user_path(current_user) %>
+    <%= link_to "Home", root_path %> |
+    <%= link_to "Settings", edit_user_path(current_user) %> |
     <%= link_to "Sign out", signout_path %>
   <% end %>
 </div>
