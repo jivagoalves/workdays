@@ -7,13 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="nav" class="round">
-  <% if signed_in? %>
+<% if signed_in? %>
+  <div id="nav" class="round">
     <%= link_to "Home", root_path %> |
     <%= link_to "Settings", edit_user_path(current_user) %> |
     <%= link_to "Sign out", signout_path %>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <% flash.each do |key, value| %>
   <div class="flash <%= key %>"><%= value %></div>

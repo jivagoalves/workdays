@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$brown: #754929;
+$orange: #FDB813;
+$blue: #39C;
+
 body {
   font-family: "Lucida Grande",verdana,arial,helvetica,sans-serif;
-  background-color: #FDB813;
+  background-color: $orange;
+  color: $brown;
 }
 
 .round {
@@ -26,7 +31,7 @@ input.submit {
 }
 
 h1 {
-  color: #754929;
+  color: $brown;
   padding-left: 30px;
 }
 
@@ -35,7 +40,7 @@ h2.title {
   padding-right: 16px;
   padding-bottom: 6px;
   padding-left: 16px;
-  color: #FDB813;
+  color: $brown;
 }
 
 #new_task_form, #task_list {
@@ -64,6 +69,29 @@ h2.title {
   padding-left: 10px;
 }
 
+.spent_time {
+  background-color: $blue;
+  color: white;
+  padding-bottom: 16px;
+  padding-left: 18px;
+  padding-top: 1px;
+}
+
+.arrow_up {
+  margin-left: 22px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid $blue;
+}
+
+a.close {
+  float: right;
+  padding-right: 20px;
+  padding-top: 8px;
+}
+
 #nav {
   position: absolute;
   top: 7px;
@@ -71,11 +99,11 @@ h2.title {
   padding: 7px 20px;
   font-size: 15px;
   background-color: #FFFFFF;
-  color: #FDB813;
+  color: $brown;
 }
 
 #nav a {
-  color: #FDB813;
+  color: $brown;
 }
 
 a.completed {

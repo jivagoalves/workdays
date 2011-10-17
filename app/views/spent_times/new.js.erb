@@ -2,8 +2,11 @@ if (!$("#spent_time_for_list_item_<%= @task.id %>").exists()) {
   $("#task_list_item_<%= @task.id %>").after(" \
     <tr id='spent_time_for_list_item_<%= @task.id %>'> \
       <td colspan='4'> \
-        <%= escape_javascript(render 'spent_times/spent_time_form') %> \
-        <%= escape_javascript(link_to 'I\'m done!', root_path, :remote => true, :id => 'close_spent_time_form_' + @task.id.to_s) %> \
+        <div class='arrow_up'></div> \
+        <div class='spent_time round'> \
+          <%= escape_javascript(link_to 'Close', root_path, :remote => true, :class => 'close', :id => 'close_spent_time_form_' + @task.id.to_s) %> \
+          <%= escape_javascript(render 'spent_times/spent_time_form') %> \
+        </div> \
       </td> \
     </tr> \
   ");
