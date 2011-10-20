@@ -5,11 +5,62 @@
 $brown: #754929;
 $orange: #FDB813;
 $blue: #39C;
+$light-blue: #DAECFD;
 
 body {
   font-family: "Lucida Grande",verdana,arial,helvetica,sans-serif;
-  background-color: $orange;
-  color: $brown;
+  background-color: #F7F7F7;
+  margin: 0px;
+  color: #555;
+}
+
+#header{
+  height: 100px;
+  
+  /* Gradient */
+  $fromColor: #80B7F1;
+  //$fromColor: #112A75;
+  $toColor: #164E88;
+  background: -moz-linear-gradient($fromColor, $toColor); /* FF 3.6+ */  
+  background: -ms-linear-gradient($fromColor, $toColor); /* IE10 */  
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $fromColor), color-stop(100%, $toColor)); /* Safari 4+, Chrome 2+ */  
+  background: -webkit-linear-gradient($fromColor, $toColor); /* Safari 5.1+, Chrome 10+ */  
+  background: -o-linear-gradient($fromColor, $toColor); /* Opera 11.10 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$fromColor', endColorstr='$toColor'); /* IE6 & IE7 */  
+  -ms-filter: "progid:DXImageTransform164E88oft.gradient(startColorstr='$fromColor', endColorstr='$toColor')"; /* IE8+ */  
+  background: linear-gradient($fromColor, $toColor); /* the standard */
+}
+
+#header h1 {
+  padding-top: 15px;
+  margin: 0px;
+  a {
+    font-size: 1.2em;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+    color: #F7F7F7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+#nav {
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  padding: 7px 20px;
+  font-size: 15px;
+  background-color: #F7F7F7;
+  -moz-box-shadow: 3px 3px 5px #444;
+  -webkit-box-shadow: 3px 3px 5px #444;
+  box-shadow: 3px 3px 5px #444;
+  border-top: 0.9px solid;
+}
+
+#nav a {
+  //color: $brown;
 }
 
 .round {
@@ -31,7 +82,7 @@ input.submit {
 }
 
 h1 {
-  color: $brown;
+  //color: $brown;
   padding-left: 30px;
 }
 
@@ -40,7 +91,7 @@ h2.title {
   padding-right: 16px;
   padding-bottom: 6px;
   padding-left: 16px;
-  color: $brown;
+  //color: $brown;
 }
 
 #tasks {
@@ -60,11 +111,12 @@ h2.title {
 div.section {
   padding-left: 20px;
   padding-right: 10px;
-  background-color: #FFFFFF;
+  background-color: white;
   padding-bottom: 10px;
-  -moz-box-shadow: -5px 5px 5px #888;
-  -webkit-box-shadow: 5px 5px 5px #888;
-  box-shadow: 5px 5px 5px #888;
+  -moz-box-shadow: 3px 3px 5px #888;
+  -webkit-box-shadow: 3px 3px 5px #888;
+  box-shadow: 3px 3px 5px #888;
+  border: 1px solid #DDD;
 }
 
 #task_description {
@@ -103,23 +155,6 @@ a.close {
   float: right;
   padding-right: 20px;
   padding-top: 8px;
-}
-
-#nav {
-  position: absolute;
-  top: 7px;
-  right: 40px;
-  padding: 7px 20px;
-  font-size: 15px;
-  background-color: #FFFFFF;
-  color: $brown;
-  -moz-box-shadow: -5px 5px 5px #888;
-  -webkit-box-shadow: 5px 5px 5px #888;
-  box-shadow: 5px 5px 5px #888;
-}
-
-#nav a {
-  color: $brown;
 }
 
 a.completed {
