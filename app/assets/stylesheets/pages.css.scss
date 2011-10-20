@@ -18,9 +18,8 @@ body {
   height: 100px;
   
   /* Gradient */
-  $fromColor: #80B7F1;
-  //$fromColor: #112A75;
-  $toColor: #164E88;
+  $fromColor: #377BC8;
+  $toColor: #04468F;
   background: -moz-linear-gradient($fromColor, $toColor); /* FF 3.6+ */  
   background: -ms-linear-gradient($fromColor, $toColor); /* IE10 */  
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $fromColor), color-stop(100%, $toColor)); /* Safari 4+, Chrome 2+ */  
@@ -32,7 +31,7 @@ body {
 }
 
 #header h1 {
-  padding-top: 15px;
+  padding-top: 20px;
   margin: 0px;
   a {
     font-size: 1.2em;
@@ -47,21 +46,60 @@ body {
 }
 
 #nav {
+  color: white;
   position: absolute;
   top: 7px;
   right: 40px;
   padding: 7px 20px;
-  font-size: 15px;
-  background-color: #F7F7F7;
+  font-size: 0.9em;
   -moz-box-shadow: 3px 3px 5px #444;
   -webkit-box-shadow: 3px 3px 5px #444;
   box-shadow: 3px 3px 5px #444;
   border-top: 0.9px solid;
+  
+  /* Gradient */
+  $fromColor: #35D248;
+  $toColor: #006B0D;
+  background: -moz-linear-gradient($fromColor, $toColor); /* FF 3.6+ */  
+  background: -ms-linear-gradient($fromColor, $toColor); /* IE10 */  
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $fromColor), color-stop(100%, $toColor)); /* Safari 4+, Chrome 2+ */  
+  background: -webkit-linear-gradient($fromColor, $toColor); /* Safari 5.1+, Chrome 10+ */  
+  background: -o-linear-gradient($fromColor, $toColor); /* Opera 11.10 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$fromColor', endColorstr='$toColor'); /* IE6 & IE7 */  
+  -ms-filter: "progid:DXImageTransform164E88oft.gradient(startColorstr='$fromColor', endColorstr='$toColor')"; /* IE8+ */  
+  background: linear-gradient($fromColor, $toColor); /* the standard */
+  
+  a {
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: white;
+    color: #222;
+  }
 }
 
-#nav a {
-  //color: $brown;
+.flash {
+  margin-left: 30px;
+  margin-top: 20px;
+  color: black;
+  max-width: 500px;
+  border: 1px dashed;
+  
+  p {
+    padding: 20px;
+    margin: 0px;
+  }
 }
+
+.notice {
+  background-color: rgba(255, 255, 0, 0.4);
+}
+
+//#nav a {
+//  color: #222;
+//}
 
 .round {
   -moz-border-radius: 15px;
