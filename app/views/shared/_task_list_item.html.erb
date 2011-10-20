@@ -2,13 +2,13 @@
   <td id="task_list_item_description_<%= task.id %>">
     <%= render :partial => 'shared/description_field_form', :locals => { :task => task } %>
   </td>
-  <td id="task_list_item_spent_time_<%= task.id %>">
+  <td id="task_list_item_spent_time_<%= task.id %>" class="add_time" >
     <%= render :partial => 'shared/new_task_spent_time_link', :locals => { :task => task } %>
   </td>
   <td id="completed_field_form_<%= task.id %>">
     <%= render :partial => 'shared/completed_field_form', :locals => { :task => task } %>
   </td>
   <td>
-    <%= button_to "X", task, :method => :delete, :remote => true, :class => 'submit magenta' %>
+    <%= button_to "X", task, :method => :delete, :remote => true, :confirm => 'Are you sure?', :class => 'delete' %>
   </td>
 </tr>
