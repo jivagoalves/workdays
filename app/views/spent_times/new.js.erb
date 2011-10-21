@@ -4,7 +4,7 @@ if (!$("#spent_time_for_list_item_<%= @task.id %>").exists()) {
       <td colspan='4'> \
         <div class='arrow_up'></div> \
         <div class='spent_time round'> \
-          <%= escape_javascript(link_to 'Close', root_path, :remote => true, :class => 'close', :id => 'close_spent_time_form_' + @task.id.to_s) %> \
+          <%= escape_javascript(link_to 'X', root_path, :remote => true, :class => 'close', :id => 'close_spent_time_form_' + @task.id.to_s) %> \
           <%= escape_javascript(render 'spent_times/spent_time_form') %> \
         </div> \
       </td> \

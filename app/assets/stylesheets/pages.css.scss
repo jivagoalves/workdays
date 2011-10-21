@@ -121,11 +121,10 @@ h1 {
 }
 
 h2.title {
-  padding-top: 12px;
-  padding-right: 16px;
+  margin-top: 10px;
   padding-bottom: 6px;
-  padding-left: 16px;
-  //color: $brown;
+  padding-right: 16px;
+  border-bottom: 1px dashed #555;
 }
 
 #tasks {
@@ -144,7 +143,7 @@ h2.title {
 
 div.section {
   padding-left: 20px;
-  padding-right: 10px;
+  padding-right: 20px;
   background-color: white;
   padding-bottom: 10px;
   -moz-box-shadow: 3px 3px 5px #888;
@@ -163,8 +162,8 @@ div.section {
 }
 
 table {
+  width: 550px;
   padding-top: 12px;
-  padding-right: 12px;
   padding-bottom: 12px;
   border-spacing: 0px;
   tbody {
@@ -176,19 +175,57 @@ table {
     padding-top: 6px;
     padding-bottom: 6px;
   }
+  td a {
+    text-decoration: none;
+    color: black;
+  }
+  td a:hover {
+    color: white;
+    background-color: #555;
+  }
+  td.description a.completed {
+    text-decoration: line-through;
+    color: #777;
+  }
+  td.description a.completed:hover {
+    text-decoration: line-through;
+    color: white;
+  }
   td.add_time {
     padding-left: 10px;
-    width: 70px;
+    width: 80px;
+  }
+  td.completed {
+    width: 75px;
+    text-align: right;
+  }
+  td.delete {
+    width: 30px;
   }
 }
 
 .spent_time {
-  background-color: $blue;
-  color: white;
-  padding-bottom: 16px;
+  background-color: #EEE;
+  color: black;
+  padding-bottom: 1px;
   padding-left: 18px;
   padding-top: 1px;
   margin: 0px;
+  margin-bottom: 4px;
+  width: 300px;
+  
+  a.close {
+    color: #555;
+    float: right;
+    text-decoration: none;
+    padding: 1px 3px 1px 3px;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  
+  a.close:hover {
+    color: white;
+  }
 }
 
 .arrow_up {
@@ -197,17 +234,7 @@ table {
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 12px solid $blue;
-}
-
-a.close {
-  float: right;
-  padding-right: 20px;
-  padding-top: 8px;
-}
-
-a.completed {
-  text-decoration: line-through;
+  border-bottom: 12px solid rgba(85, 85, 85, 0.1);
 }
 
 form.formatted .field input {
