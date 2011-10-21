@@ -1,9 +1,8 @@
 <% if errors.any? %>
   <div id="error_explanation">
-    <h3>
-      <%= pluralize(errors.count, "error") %> prohibited this request.
-    </h3>
-    <p>There were problems with the following fields:</p>
+    <p>
+      <%= pluralize(errors.count, "error") %> prohibited this request:
+    </p>
     <ul>
       <% errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

@@ -88,20 +88,46 @@ body {
 }
 
 .flash {
-  margin-left: 30px;
-  margin-top: 20px;
-  color: black;
   max-width: 500px;
-  border: 1px dashed;
-  
   p {
+    margin-left: 30px;
     padding: 20px;
-    margin: 0px;
+    border: 1px solid;
   }
 }
 
-.notice {
-  background-color: rgba(255, 255, 0, 0.4);
+.success p {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+
+.notice p {
+  color: #00529B;
+  background-color: #BDE5F8;
+}
+
+.error p {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+#error_explanation {
+  padding-left: 20px;
+  background-color: #FFBABA;
+  border: 1px solid #D8000C;
+  color: #D8000C;
+  font-size: 0.8em;
+}
+
+.field_with_errors input {
+  border: 1px solid red;
+  height: 20px;
+  width: 220px;
+}
+
+.field_with_errors label {
+  float: left;
+  width: 160px;
 }
 
 .round {
