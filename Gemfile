@@ -28,12 +28,27 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-  gem 'rspec-rails', '2.6.1'
   gem 'rack', '1.3.3'
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails', '2.6.1'
+  gem 'factory_girl'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'rb-inotify', :require => false if RUBY_PLATFORM =~ /linux/
+  gem 'libnotify', :require => false if RUBY_PLATFORM =~ /linux/
+end
+
+group :cucumber do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'spork'
+  gem 'launchy'
+  gem 'guard-cucumber'
+  gem 'guard-spork'
 end
 
 gem 'authlogic', '3.0.3'
