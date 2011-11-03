@@ -4,6 +4,11 @@ class UsersController < ApplicationController
   # TODO: before_filter :admin_user,   :only => [:destroy]
   before_filter :redirect_if_signed_in, :only => [:new, :create]
   
+  def index
+    redirect_to root_path unless current_user.admin?
+    @users = User.all
+  end
+  
   def new
     @user = User.new
   end

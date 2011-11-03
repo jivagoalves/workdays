@@ -1,9 +1,3 @@
-Given /^I am signed in as (.*)$/ do |firstname|
-  @user = Factory.build(:user, :firstname => firstname)
-  @user.save_without_session_maintenance
-  sign_in(@user)
-end
-
 Given /^I have a task$/ do
   @task = Factory(:task, :user_id => @user.id)
 end
